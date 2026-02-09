@@ -2,20 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.rtl {
+  direction: rtl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'BHelal';
+  src: url('./assets/fonts/B\ Helal_0.ttf') format('truetype');
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'sogand';
+  src: url('./assets/fonts/SOGAND.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CasablancaHeavy';
+  src: url('./assets/fonts/Far_Casablanca\ Heavy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Casablanca';
+  src: url('./assets/fonts/Far_Casablanca.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BMorvarid';
+  src: url('./assets/fonts/B\ Morvarid_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Aref';
+  src: url('./assets/fonts/Far_Aref.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Far_Traffic';
+  src: url('./assets/fonts/Far_Traffic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Far_Baseet';
+  src: url('./assets/fonts/Far_Baseet.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('./assets/fonts/Sahel.eot');
+  src: url('./assets/fonts/Sahel.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/Sahel.woff2') format('woff2'),
+       url('./assets/fonts/Sahel.ttf') format('truetype');
+  font-weight: normal;
+}
+      
+@font-face {
+  font-family: Sahel;
+  src: url('./assets/fonts/Sahel-Bold.eot');
+  src: url('./assets/fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/Sahel-Bold.woff2') format('woff2'),
+       url('./assets/fonts/Sahel-Bold.woff') format('woff'),
+       url('./assets/fonts/Sahel-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('./assets/fonts/Sahel-Light.eot');
+  src: url('./assets/fonts/Sahel-Light.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/Sahel-Light.woff2') format('woff2'),  
+       url('./assets/fonts/Sahel-Light.woff') format('woff'),
+       url('./assets/fonts/Sahel-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+      
+@font-face {
+  font-family: Sahel;
+  src: url('./assets/fonts/Sahel-SemiBold.eot');
+  src: url('./assets/fonts/Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/Sahel-SemiBold.woff2') format('woff2'),  
+       url('./assets/fonts/Sahel-SemiBold.woff') format('woff'),
+       url('./assets/fonts/Sahel-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('./assets/fonts/Sahel-Black.eot');
+  src: url('./assets/fonts/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/Sahel-Black.woff2') format('woff2'),  
+       url('./assets/fonts/Sahel-Black.woff') format('woff'),
+       url('./assets/fonts/Sahel-Black.ttf') format('truetype');
+  font-weight: 900;
 }

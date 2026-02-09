@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kalil Javaneh
 
-## Getting Started
+A single-page product website built with Next.js for the "Kalil Javaneh" brand.
+The page presents product value, nutrition details, usage guidance, and contact channels in a Persian-first layout.
 
-First, run the development server:
+## Project Scope
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Brand-focused landing page
+- Content-heavy health and nutrition presentation
+- Mobile-first responsive design
+- Direct conversion path through contact links and order modal
+
+## Tech Stack
+
+- `Next.js 15` (App Router)
+- `React 19` + `TypeScript`
+- `Tailwind CSS`
+- `Ant Design` (modal and image preview)
+- `Akar Icons`
+- `Framer Motion` (carousel component, currently not mounted)
+- `animate.css`
+
+## Page Composition
+
+The homepage (`app/page.tsx`) is assembled from reusable sections:
+
+1. `Navbar`  
+   Brand header with simplified navigation layout.
+2. `Hero`  
+   Core product messaging, CTA button, order/contact modal, product image preview, and trust cards.
+3. `About`  
+   Long-form descriptive content and product background narrative.
+4. `ToUse`  
+   Usage instructions, health claims, nutrition breakdown tables, fatty acid details, and wheat-part explanation.
+5. `Footer`  
+   Contact actions (phone, Telegram, WhatsApp) and designer credit.
+
+## UI and Interaction Highlights
+
+- Animated stats counters triggered on viewport intersection (`Counter` component)
+- Product image zoom/preview via Ant Design `Image`
+- Order information modal opened from hero CTA
+- Responsive content blocks with custom breakpoints (`ultraSmall`, `verySmall`, `small`)
+- Reusable presentational components (`Button`, `Card`, `Counter`)
+
+## Styling and Typography
+
+- Global styles live in `app/globals.css`
+- Tailwind configuration in `tailwind.config.ts`
+- Extensive local Persian font set (Sahel, Vazirmatn, and custom fonts)
+- RTL utility class (`.rtl`) applied where needed for Persian text blocks
+
+## Content Model
+
+Most content is currently embedded directly in components as static text and in-file arrays (especially in `ToUse.tsx`), including:
+
+- Nutrition percentages
+- Fatty acid values
+- Product composition breakdown
+- Health/benefit bullet lists
+
+This makes the site straightforward to edit but tightly couples content and UI.
+
+## SEO and Metadata
+
+- Static metadata is defined in `app/layout.tsx`
+- Structured data (`application/ld+json`) is injected for website identity and author attribution
+
+## Project Structure
+
+```text
+app/
+  assets/               Images, icons, fonts
+  components/           UI sections and shared components
+  globals.css           Global styles + font-face declarations
+  layout.tsx            Root layout + metadata + JSON-LD
+  page.tsx              Homepage composition
+tailwind.config.ts      Design tokens, breakpoints, font families
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
