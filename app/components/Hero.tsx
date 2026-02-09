@@ -191,7 +191,7 @@ function Hero() {
 
           <div className="flex flex-col items-center justify-center gap-y-1 z-10 bg-black/20 p-3 sm:p-4 rounded-xl backdrop-blur-sm lg:mb-5">
 
-            <Counter targetNumber={20}/>
+            <Counter targetNumber={30}/>
 
             <h1 className="font-vazir leading-7  font-bold text-sm small:text-base sm:text-lg md:text-xl text-white">
               سال سابقه کار
